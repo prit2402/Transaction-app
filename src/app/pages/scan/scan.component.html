@@ -1,9 +1,13 @@
-<label for="images" class="drop-container" id="dropcontainer">
+{% comment %} <label for="images" class="drop-container" id="dropcontainer">
     <span class="drop-title">Upload Transaction File</span>
     
     <input type="file" id="images"  required>
     <button type="submit">UPLOAD</button>
     <br>
     <p><img src="tic.png">img File Scanner Succesfully</p>
-  </label>
+  </label> {% endcomment %}
+  <form (submit)="onFileSelected($event)">
+    <input type="file" (change)="onFileChange($event)" />
+    <button type="submit">Upload</button>
+  </form>
 //angular material
